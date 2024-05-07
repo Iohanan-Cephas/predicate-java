@@ -10,6 +10,11 @@ Um `Predicate` é uma interface funcional em Java que representa um predicado (o
 
 - Implementação de um exemplo simples de uso do `Predicate` em Java.
 - Filtragem de uma lista de produtos com base no preço.
+- Implementação da interface.
+- Reference method com método estático.
+- Reference method com método não estático.
+- Expressão lambda declarada.
+- Expressão lambda inline.
 
 ## Como usar
 
