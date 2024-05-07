@@ -15,9 +15,11 @@ public class AppMain {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 		
-		/*list.removeIf(new ProductPredicate());*/
+		/*list.removeIf(new ProductPredicate());*/ /*--- INTERFACE IMPLEMENTATION ---*/
 		
-		list.removeIf(Product::staticPredicate);
+		/*list.removeIf(Product::staticPredicate);*/ /*--- REFERENCE METHOD (STATIC) ---*/
+		
+		list.removeIf(Product::nonStaticPredicate);
 		
 		for(Product p : list) {
 			System.out.println(p);
