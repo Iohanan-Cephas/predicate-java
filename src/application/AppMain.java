@@ -21,9 +21,12 @@ public class AppMain {
 		
 		/*list.removeIf(Product::nonStaticPredicate);*/ /*--- REFERENCE METHOD (non STATIC) ---*/
 		
-		double min = 100.00;
+		/*double min = 100.00;
 		Predicate<Product> pred = p -> p.getPrice() >= min;
-		list.removeIf(pred);
+		list.removeIf(pred);*/ /*--- LAMBDA EXPRESSION ---*/
+		
+		double min = 100.00;
+		list.removeIf(p -> p.getPrice() >= min); /*--- LAMBDA EXPRESSION INLINE ---*/
 		
 		for(Product p : list) {
 			System.out.println(p);
