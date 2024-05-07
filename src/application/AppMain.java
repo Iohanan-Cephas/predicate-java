@@ -2,9 +2,9 @@ package application;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 import entities.Product;
-import util.ProductPredicate;
 
 public class AppMain {
 	public static void main(String[] args) {
@@ -19,7 +19,11 @@ public class AppMain {
 		
 		/*list.removeIf(Product::staticPredicate);*/ /*--- REFERENCE METHOD (STATIC) ---*/
 		
-		list.removeIf(Product::nonStaticPredicate);
+		/*list.removeIf(Product::nonStaticPredicate);*/ /*--- REFERENCE METHOD (non STATIC) ---*/
+		
+		double min = 100.00;
+		Predicate<Product> pred = p -> p.getPrice() >= min;
+		list.removeIf(pred);
 		
 		for(Product p : list) {
 			System.out.println(p);
